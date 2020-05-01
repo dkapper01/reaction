@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+// import Context from '../context';
+import { useAppContext } from './hooks';
 import { newMessage } from '../state/actions';
 
-function PublishMessage(props) {
-  const { dispatch } = props;
+function PublishMessage() {
+  const { dispatch } = useAppContext();
   const [text, setText] = useState('');
 
   const updateText = (event) => {
